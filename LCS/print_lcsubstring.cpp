@@ -39,7 +39,7 @@ int main()
 	{
 		if(s1[i - 1] == s2[j - 1])
 		{
-			output.insert(output.begin(), s1[i - 1]);
+			output += s1[i - 1];
 			i--;
 			j--;
 		}
@@ -48,7 +48,7 @@ int main()
 			(dp[i - 1][j] > dp[i][j - 1])? (i--) : (j--);
 		}
 	}
-
+	reverse(output.begin(), output.end());
 	cout << "Longest common substring is " << output << endl;
 	return 0;
 }
