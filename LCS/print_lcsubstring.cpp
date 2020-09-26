@@ -45,7 +45,7 @@ int main()
 		}
 		else
 		{
-			dp[i][j] = (dp[i - 1][j] > dp[i][j - 1])? (i--) : (j--);
+			(dp[i - 1][j] > dp[i][j - 1])? (i--) : (j--);
 		}
 	}
 
